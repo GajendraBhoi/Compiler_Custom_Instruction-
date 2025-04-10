@@ -7,18 +7,18 @@ std::vector<Token> tokenize(const std::string &code)
     std::vector<Token> tokens;
     // Define a regex pattern for tokens.
     std::regex tokenPatterns(
-        "(int)|"                    //1. INT
-        "(print)|"                  //2. PRINT 
-        "([0-9]+)|"                 //3. NUMBER
-        "([a-zA-Z_][a-zA-Z0-9_]*)|" //4. Identifier
-        "(=)|"                      //5. ASSIGN
-        "(\\*)|"                    //6. MUL
-        "(\\+)|"                    //7. ADD
-        "(\\()|"                    //8. LPAREN
-        "(\\))|"                    //9. RPAREN
-        "(;)|"                      //10. SEMICOLON
-        "([ \\t]+)|"                //11. Whitespace
-        "(\n)"                      //12. Newline
+        "(int)|"                    // 1. INT
+        "(print)|"                  // 2. PRINT
+        "([0-9]+)|"                 // 3. NUMBER
+        "([a-zA-Z_][a-zA-Z0-9_]*)|" // 4. Identifier
+        "(=)|"                      // 5. ASSIGN
+        "(\\*)|"                    // 6. MUL
+        "(\\+)|"                    // 7. ADD
+        "(\\()|"                    // 8. LPAREN
+        "(\\))|"                    // 9. RPAREN
+        "(;)|"                      // 10. SEMICOLON
+        "([ \\t]+)|"                // 11. Whitespace
+        "(\n)"                      // 12. Newline
     );
     auto words_begin = std::sregex_iterator(code.begin(), code.end(), tokenPatterns);
     auto words_end = std::sregex_iterator();
@@ -73,7 +73,7 @@ std::vector<Token> tokenize(const std::string &code)
         {
         }
     }
-    
+
     tokens.push_back({"EOF", ""});
     return tokens;
 }

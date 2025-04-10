@@ -8,7 +8,7 @@ Proffesor - Mrs. Sonal Yadav
 
 ---
 
-## Custom Compiler Simulation in C++
+## Custom Compiler Simulation in  C++
 
 This project implements a minimal compiler pipeline in C++ that demonstrates the key phases of compilation—tokenization, parsing, abstract syntax tree (AST) generation, code generation, and interpretation—while applying a simple optimization. Specifically, it recognizes the mathematical expression `log(x) + 2 * x` and replaces it with a custom instruction `LOGMULADD`.
 
